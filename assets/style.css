@@ -1135,6 +1135,15 @@ input[placeholder]:nth-child(3) {
 }
 
 
+.solution_info {
+  text-align: center;
+  background-color: #fff;
+  padding-top: 85px;
+}
+
+
+
+
 /* products */
 
 .product__slider {
@@ -1201,7 +1210,7 @@ input[placeholder]:nth-child(3) {
 }
 
 .slider h3 {
-  background: #fff;
+  background: #ccc;
   color: #3498db;
   font-size: 36px;
   line-height: 100px;
@@ -1223,9 +1232,55 @@ input[placeholder]:nth-child(3) {
   justify-content: center;
 }
 
+.tab_content_3 {
+  flex-direction: column;
+}
+
+.tab_3 {
+  display: flex;
+  overflow: scroll;
+}
+
+body .tablinks_3 {
+  flex-direction: column-reverse;
+  min-height: 100% !important;
+}
+
+.tab_column_3::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  bottom: 55px;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.tab_line_3 {
+  display: none;
+}
+
+.tab_des_3 {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 44px;
+  text-align: center;
+  color: #000000;
+}
+
+body .tab_img_3 {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.tabcontent_sol_3 {
+  width: 100%;
+}
+
 .solution__column {
   flex: 0 1 50%;
   transition: 0.6s;
+  position: relative;
 }
 
 .tablinks {
@@ -1287,13 +1342,16 @@ input[placeholder]:nth-child(3) {
 }
 
 /* Style the tab content */
-.tabcontent {
+.tabcontent,
+.tabcontent_sol_3 {
   display: none;
   position: relative;
   float: left;
   padding: 0px 12px;
   border-left: none;
 }
+
+
 
 .tablinks.active {
   color: #00b259;
@@ -1797,18 +1855,22 @@ iframe {
 .licenses_bg {
   padding-top: 85px;
 }
+
 .licenses {
   margin-bottom: 31px;
 }
+
 .licenses,
 .licenses_box {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .licenses_item {
   color: #000;
 }
+
 .licenses__title {
   font-weight: 500;
   font-size: 66px;
@@ -1824,7 +1886,8 @@ iframe {
   justify-content: center;
 
 }
-.licenses_box_item  .box_1{
+
+.licenses_box_item .box_1 {
   width: 238px;
   height: 355px;
 
@@ -1845,8 +1908,175 @@ iframe {
 
 /* calc_page */
 
-.calc_page > a >img {
+.calc_page>a>img {
   width: 32px;
   height: 32px;
   margin-left: 18px;
 }
+
+.calc_blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+
+.calc_section {
+  padding-top: 100px;
+  background-color: #fff;
+}
+
+.calc_right_item {
+  margin-bottom: 70px;
+}
+
+.calc_right_item:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+/* select  */
+
+#selectbox {
+  width: 100%;
+  margin-bottom: 70px;
+  padding: 0 20px 40px;
+  border: 0;
+  border-bottom: 5px solid #A7D4BE;
+  letter-spacing: 0.15em;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 130%;
+  color: #000000;
+}
+
+#selectbox>option {
+  font-size: 18px;
+}
+
+#selectbox:focus,
+#selectbox:active {
+  outline: 0;
+  border-bottom-color: #00B259;
+}
+
+/* input */
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  line-height: 14px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.input-wrapper>label {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 14px;
+  padding: 0 2px;
+  pointer-events: none;
+  background: #fff;
+  transition: transform 100ms ease;
+  transform: translateY(-20px);
+
+
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 44px;
+  color: #000000;
+}
+
+.input-wrapper>input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #bbb;
+  padding: 45px 20px 30px;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid;
+
+
+  font-weight: 600;
+  font-size: 57px;
+  line-height: 74px;
+  color: #00B259;
+}
+
+input:invalid+label {
+  transform: translateY(0);
+}
+
+input:focus {
+  border-color: #2b96f1;
+}
+
+input:focus+label {
+  color: #2b96f1;
+  transform: translateY(-20px);
+}
+
+
+
+
+
+
+/* range input */
+/*  */
+
+
+
+.chart {
+  padding-top: 100px;
+  background: #fff;
+}
+
+
+
+/* tabs */
+.slide_tab_bg {
+  padding-top: 80px;
+  /* background-color: #fff; */
+}
+
+.slide_tab {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Style the buttons inside the tab */
+.slide_tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.slide_tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.slide_tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.slider_tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* .tab_main {
+
+} */
