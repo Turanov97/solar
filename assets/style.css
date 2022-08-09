@@ -1338,7 +1338,6 @@ input[placeholder]:nth-child(3) {
 
 .tab_3 {
   display: flex;
-  overflow: scroll;
 }
 
 body .tablinks_3 {
