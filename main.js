@@ -122,7 +122,7 @@ if ($dropdownMenu !== null ) {
 
 
 $(document).ready(function () {
-  $(".collapse.in").prev(".panel-heading").addClass("active");
+  // $(".collapse.in").prev(".panel-heading").addClass("active");
   $("#accordion, #bs-collapse")
     .on("show.bs.collapse", function (a) {
       $(a.target).prev(".panel-heading").addClass("active");

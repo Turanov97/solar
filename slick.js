@@ -10,7 +10,7 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: ".slider-for",
-    dots: true,
+    // dots: true,/
     focusOnSelect: true,
   });
   
